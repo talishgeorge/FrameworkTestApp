@@ -49,7 +49,7 @@ extension HomeViewController: UITableViewDataSource {
         }
         
         if (alpha <= 0) {
-            navBar.setBGColorWithAlpha(alpha: 1.0)
+            navBar.setBackgroundColorWithAlpha(alpha: 1.0)
         }
     }
 }

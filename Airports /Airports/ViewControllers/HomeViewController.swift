@@ -9,7 +9,9 @@ import UIKit
 import CNavBarLib
 
 class HomeViewController: BaseViewController {
-    
+    //MARK: Private Properties
+    private var leftBarButtonTitle: String
+    private var rightBarButtonTitle: String
     // MARK: - IBOutlets
     @IBOutlet weak var overlayViewController: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -21,8 +23,7 @@ class HomeViewController: BaseViewController {
     var selectedIndex = 0
     var error: NSString?
     var navTitle: String
-    private var leftBarButtonTitle: String
-    private var rightBarButtonTitle: String
+    
     var fontName: String
     
     // MARK: - Observer Properties
@@ -56,7 +57,7 @@ class HomeViewController: BaseViewController {
         configureView()
         
         NavBarConstants.leftNavButtonImage = UIImage()
-        navBar.configureNavBar()
+        navBar.configureNavigationBar()
         
         navBar.onRightButtonAction = { success in
             self.performSegue(withIdentifier: "detailViewSegue", sender: self)
@@ -111,7 +112,7 @@ extension HomeViewController: HomeViewModelDelegate {
         DispatchQueue.main.async {
             self.mainTableview.reloadData()
             ActivityIndicator.dismiss()
-            self.navBar.hidePrgressBar()
+            self.navBar.hideProgressBar()
         }
     }
     
@@ -145,9 +146,9 @@ extension HomeViewController {
         searchBar.alpha = 0.6
         setUpNavigation()
         searchBar.returnKeyType = UIReturnKeyType.done
-        self.navBar.stratHorizontalProgressbar()
+        self.navBar.startHorizontalProgressbar()
         NavBarConstants.titleText = "Home"
-        navBar.configureNavBar()
+        navBar.configureNavigationBar()
         downloadAirportList()
     }
 }

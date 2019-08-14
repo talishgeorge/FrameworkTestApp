@@ -46,8 +46,7 @@ class DetailsViewController: BaseViewController {
         NavBarConstants.leftTitleText = "Back"
         NavBarConstants.leftRightTitleFont = UIFont.boldSystemFont(ofSize: 16)
         NavBarConstants.rightNavButtonImage = UIImage()
-        navBar.configureNavBar()
-        
+        navBar.configureNavigationBar()
         navBar.isHidden = false
     }
     

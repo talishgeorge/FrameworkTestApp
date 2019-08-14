@@ -10,7 +10,7 @@ import UIKit
 import CNavBarLib
 
 class BaseViewController: UIViewController {
-    public var navBar = CustomNavigationController.loadNavBar()
+    public var navBar = CustomNavigationController.loadNavigationBar()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +19,7 @@ class BaseViewController: UIViewController {
         let safeGuide = self.view.safeAreaLayoutGuide
         navBar.setupSafeAreaGuide(guide: safeGuide)
         setNavBarProperties()
-        navBar.configureNavBar()
+        navBar.configureNavigationBar()
     }
     
     fileprivate func setNavBarProperties() {
@@ -38,3 +38,4 @@ class BaseViewController: UIViewController {
     }
 
 }
+
