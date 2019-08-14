@@ -35,7 +35,7 @@ class BaseViewController: UIViewController {
         NavBarConstants.heightForLinearBar = 4
         NavBarConstants.backgroundProgressBarColor = UIColor.black
         NavBarConstants.progressBarColor = UIColor.white
+        NavBarConstants.animaitonType = .fill
     }
-
 }
 
