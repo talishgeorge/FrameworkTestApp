@@ -188,8 +188,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSCoder;
 
 /// Fully customizable Navigation controller typically displayed at the top of the screen
-SWIFT_CLASS("_TtC10CNavBarLib26CustomNavigationController")
-@interface CustomNavigationController : UIView
+SWIFT_CLASS("_TtC10CNavBarLib20CustomNavigationView")
+@interface CustomNavigationView : UIView
 /// This constructor/initializer will be called when we are creating view programmatically with init(frame: CGRect)
 /// \param NSCoder 
 ///

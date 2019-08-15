@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		A00Xvh1LDCHfIrpFN3fPfCdriBY=
+		iFNTGKRv4lvtRZ693zAUq96CJ/I=
 		</data>
 		<key>CustomNavigationBar.nib</key>
 		<data>
-		Qgjz9k1P28PBLj0FeBn/m4fzXKE=
+		P/GvlrWkJl6dLjKt4U5BqDMOdzk=
 		</data>
 		<key>Headers/CNavBarLib-Swift.h</key>
 		<data>
-		ki+CyKADOpjRKmSFbbbyZDTrIcM=
+		MUbMEdYnMpXM/gAH1VgB5Ubx7ic=
 		</data>
 		<key>Headers/CNavBarLib.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/CNavBarLib.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		7AyLZ+EuYsGYpy1qPm9iW570+jg=
+		mc1ZlHHTnpy5CO47WRGGCFrYSSE=
 		</data>
 		<key>Modules/CNavBarLib.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		j88CeQHyhTqHPWEy5vnFWv3Xomk=
+		nvluSwg6EbdXCZVZ4HOeEqxq3gQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,21 +47,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jyNRRJZmapBbN4aTKXPUipJIS/pfMwA3zjTWAeVNtqg=
+			/CoVsVzC+plsxO3sF3Qa/qAoA5YjJ/CrDVzrWbk3Ra0=
 			</data>
 		</dict>
 		<key>CustomNavigationBar.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HIlpxPTUpo0YKZS6+wvceZEq/7equ+bn6Yf8XtPZ61M=
+			h2TdPu5O/neqVe2qtX3IVvE4PCYjB/GPXze2y0sLhJc=
 			</data>
 		</dict>
 		<key>Headers/CNavBarLib-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LuzRaXFI0P6Wws6rrUMRLCRRo+rKU4Kh59pG6JkVjeY=
+			3Hj3XP9u/WK4SYOnX5ESwTmIlXIQHXEt7jxStVa81go=
 			</data>
 		</dict>
 		<key>Headers/CNavBarLib.h</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Tpk8u0e2j8R7VX5ES2Ikl+PwBHwzijS4BECHsw4Vms=
+			dUSvLfAJ+XvLw2p8SrJgc6wf5pMhCGEcP3CxCHmHN+E=
 			</data>
 		</dict>
 		<key>Modules/CNavBarLib.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HJj2SnMmuq1ChCyvNG9qB6iZXXjHZW3suLNjwqBESEE=
+			hS9E3wTBljirUxp+iUlL+U9FaEQ6Gzs84FmN/Svo6aY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

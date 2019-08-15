@@ -10,14 +10,14 @@ import UIKit
 import CNavBarLib
 
 class BaseViewController: UIViewController {
-    public var navBar = CustomNavigationController.loadNavigationBar()
+    public var navBar = CustomNavigationView.loadNavigationBar()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navBar.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(navBar)
         let safeGuide = self.view.safeAreaLayoutGuide
-        navBar.setupSafeAreaGuide(guide: safeGuide)
+        navBar.setupSafeArea(guide: safeGuide)
         setNavBarProperties()
         navBar.configureNavigationBar()
     }
