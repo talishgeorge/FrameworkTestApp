@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CNavBarLib
 
 extension HomeViewController: UITableViewDataSource {
     // MARK: - Tableview Datasource Methods
@@ -42,14 +43,26 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let alpha = scrollView.contentOffset.y / -88
-        //print("Scroll Offset =>", alpha)
-        if alpha <= 0.2  {
-            navBar.setTransparency(alpha: Float(abs(alpha)))
+        var offset = scrollView.contentOffset.y / 144
+       
+        if offset >= 0  {
+            offset = 1
+            let color =  UIColor(hexString: "#0074b1", alpha: Float(offset))
+
+           CustomNavigationBar.shared.applyTransparentBackgroundToTheNavigationBar(offset,color)
+           UIApplication.shared.statusBarView?.backgroundColor = color
+           //CustomNavigationBar.shared.resetNavigation()
+            
         }
-        
-        if (alpha <= 0) {
-            navBar.setBackgroundColorWithAlpha(alpha: 1.0)
+        else {
+            print(offset)
+            if(abs(offset) > 0.3){
+            offset = 0.3
+            }
+            let color = UIColor.black.withAlphaComponent(abs(offset))
+           //CustomNavigationBar.shared.enableLargeTitleDisplayMode(UIColor.init(hexString: "#0074b1", alpha: 1.0))
+            CustomNavigationBar.shared.applyTransparentBackgroundToTheNavigationBar(offset,color)
+            UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
         }
     }
 }

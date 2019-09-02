@@ -187,6 +187,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSCoder;
 
+/// It holds all required things for a type to specify the requirement of
+/// how the navigation bar with all of it’s items look like and behave.
+SWIFT_CLASS("_TtC10CNavBarLib19CustomNavigationBar")
+@interface CustomNavigationBar : UINavigationBar
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 /// Fully customizable Navigation controller typically displayed at the top of the screen
 SWIFT_CLASS("_TtC10CNavBarLib20CustomNavigationView")
 @interface CustomNavigationView : UIView
@@ -205,6 +214,8 @@ SWIFT_CLASS("_TtC10CNavBarLib20CustomNavigationView")
 ///
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 

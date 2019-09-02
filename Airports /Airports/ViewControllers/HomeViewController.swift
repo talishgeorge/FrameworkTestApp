@@ -8,7 +8,11 @@
 import UIKit
 import CNavBarLib
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController {
+    
+    var barBackgroundColor: UIColor = UIColor.blue.withAlphaComponent(0.5)
+    var backText: String? = "<-- Go back uuu"
+    
     //MARK: Private Properties
     private var leftBarButtonTitle: String
     private var rightBarButtonTitle: String
@@ -48,7 +52,6 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Managing the View
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableview.dataSource = self
@@ -56,12 +59,35 @@ class HomeViewController: BaseViewController {
         searchBar.delegate = self
         configureView()
         
-        NavBarConstants.leftNavButtonImage = UIImage()
-        navBar.configureNavigationBar()
+        //NavBarConstants.leftNavButtonImage = UIImage()
+        //navBar.configureNavigationBar()
         
-        navBar.onRightButtonAction = { success in
-            self.performSegue(withIdentifier: "detailViewSegue", sender: self)
+        // navBar.onRightButtonAction = { success in
+        // self.performSegue(withIdentifier: "detailViewSegue", sender: self)
+        //}
+        NavBarConstants.rootNavigationController = self.navigationController
+        NavBarConstants.barBGColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
+        NavBarConstants.titleColor = UIColor.white
+        NavBarConstants.titleText = "Hiiiiaidfiasdfisdafisadf"
+        NavBarConstants.leftNavButtonImage = UIImage(named: "arrow")!
+        NavBarConstants.leftTitleText = "<-Back"
+        
+        NavBarConstants.rightNavButtonImage = UIImage(named: "menu")!
+        NavBarConstants.rightTitleText = "Right->"
+        NavBarConstants.titleText = "Home"
+        
+        CustomNavigationBar.shared.onLeftButtonAction = { success in
+            print("Left Bar Button Tapped")
         }
+        CustomNavigationBar.shared.onRightButtonAction = { success in
+            print("Right Bar Button Tapped")
+        }
+        CustomNavigationBar.shared.updateNavigation()
+        //CustomNavigationBar.shared.applyTransparentBackgroundToTheNavigationBar(0.5)
+        //CustomNavigationBar.shared.startHorizontalProgressbar()
+        //CustomNavigationBar.shared.enableLargeTitleDisplayMode(UIColor.init(hexString: "#0074b1", alpha: 1.0))
+        //UIApplication.shared.statusBarView?.backgroundColor = UIColor.init(hexString: "#0074b1", alpha: 1.0)
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
     }
     
     // MARK: - Download Airport List
@@ -112,7 +138,7 @@ extension HomeViewController: HomeViewModelDelegate {
         DispatchQueue.main.async {
             self.mainTableview.reloadData()
             ActivityIndicator.dismiss()
-            self.navBar.hideProgressBar()
+            //self.navBar.hideProgressBar()
         }
     }
     
@@ -144,11 +170,11 @@ extension HomeViewController {
         itemArray.removeAll()
         //searchBar.isUserInteractionEnabled = false
         searchBar.alpha = 0.6
-        setUpNavigation()
+        //setUpNavigation()
         searchBar.returnKeyType = UIReturnKeyType.done
-        self.navBar.startHorizontalProgressbar()
-        NavBarConstants.titleText = "Home"
-        navBar.configureNavigationBar()
+        //self.navBar.startHorizontalProgressbar()
+        //NavBarConstants.titleText = "Home"
+        //navBar.configureNavigationBar()
         downloadAirportList()
     }
 }

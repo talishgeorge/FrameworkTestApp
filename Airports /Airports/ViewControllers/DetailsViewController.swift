@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import CNavBarLib
 
-class DetailsViewController: BaseViewController {
+class DetailsViewController: UIViewController {
     
     @IBOutlet weak var nearstAirportsTableView: UITableView!
     @IBOutlet weak var formattedAddress: UITextView!
@@ -39,15 +39,15 @@ class DetailsViewController: BaseViewController {
         nearstAirportsTableView.dataSource = self
         viewModel.detailViewModelDelegate = self
         configureView()
-        navBar.onLeftButtonAction = { success in
-            self.navBar.navigationController()?.popViewController(animated: true)
-        }
-        NavBarConstants.titleText = "Details"
+        //navBar.onLeftButtonAction = { success in
+            //self.navBar.navigationController()?.popViewController(animated: true)
+        //}
+        //NavBarConstants.titleText = "Details"
         NavBarConstants.leftTitleText = "Back"
         NavBarConstants.leftRightTitleFont = UIFont.boldSystemFont(ofSize: 16)
         NavBarConstants.rightNavButtonImage = UIImage()
-        navBar.configureNavigationBar()
-        navBar.isHidden = false
+        //navBar.configureNavigationBar()
+        //navBar.isHidden = false
     }
     
     // MARK: - Initilizer

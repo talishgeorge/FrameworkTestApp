@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.isStatusBarHidden = false
         return true
+    }
+}
+extension UIApplication{
+    var statusBarView: UIView?{
+        return value(forKey: "statusBar") as? UIView
     }
 }

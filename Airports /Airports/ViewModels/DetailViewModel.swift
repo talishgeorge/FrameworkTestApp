@@ -37,8 +37,13 @@ class DetailViewModel {
     private let coord3 = CLLocation(latitude: 48.771896, longitude: 2.270748000000026)
     var lat: Double? = 0.00
     var lon: Double? = 0.00
-    
+    var reservationId: String?
+    var selectedPaxPath: Int?
+    var currentReservation: String?
+    var paxInfo:  String?
     weak var detailViewModelDelegate: DetailViewModelDelegate?
+    
+  
     
     // MARK: - Initializer
     init(navTitle: String, leftBarButtonTitle: String, fontName: String) {
